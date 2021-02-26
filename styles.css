@@ -1,0 +1,266 @@
+:root
+{
+    --light-primary-color: rgb(255, 132, 75);
+    --primary-color: rgb(255, 81, 0);
+    --dark-primary-color: rgb(199, 63, 0);
+}
+
+html, body, section
+{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+section
+{
+    animation: loadInAnimation 2s;
+}
+
+@keyframes loadInAnimation
+{
+    0%
+    {
+        opacity: 0;        
+    }
+
+    100%
+    {
+        opacity: 1;        
+    }
+}
+
+section
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    min-height: 100vh;    
+}
+
+h1, h2
+{
+    margin: 0;
+    font-size: 100px;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2
+{
+    margin: 20px 0 50px 0;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.social-button
+{
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px 0 0 0;
+    width: 275px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.social-button:hover
+{
+    background: var(--dark-primary-color);
+}
+
+.social-icon
+{    
+    position: absolute;
+    margin-left: 5px;
+    height: 90%;
+}
+
+.small-social-icon
+{
+    height: 60%;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.social-text
+{
+    color: white;
+    font-size: 25px;
+    flex: 1;
+}
+
+.circle-1, .circle-2
+{
+    background: var(--primary-color);
+    position: absolute;
+    margin: 0;
+    border-radius: 50%; 
+    opacity: 0.65;
+    z-index: -100;
+}
+
+.circle-1
+{    
+    top: 35%;  
+    left: 25%; 
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 550px;
+    animation: float 5s ease-in-out infinite;
+}
+
+.circle-2
+{    
+    top: 65%;  
+    left: 75%; 
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    animation: float 7s ease-in-out infinite;
+}
+
+@keyframes float
+{
+    0%
+    {
+        transform: translate(-50%, -52%);
+    }
+
+    50%
+    {
+        transform: translate(-50%, -48%);
+    }
+
+    100%
+    {
+        transform: translate(-50%, -52%);
+    }
+}
+
+.projects
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.projects-row
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.project
+{
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 775px;
+    margin: 0 50px;
+    padding: 25px;
+    padding-bottom: 0;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.project:hover
+{
+    transform: translateY(-40px);
+    opacity: 1;
+}
+
+.project:hover > .project-icon
+{
+    transform: translateY(0px);
+}
+
+.project-icon
+{
+    width: 100%;
+    border-radius: 15px;
+    transform: translateY(15px);
+    transition: 0.2s;
+}
+
+.project-description
+{
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+}
+
+.skills
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+    width: 50vw;
+    margin-top: 10px;
+}
+
+.skill
+{
+    background: rgb(139, 139, 139);
+    color: white;
+    margin: 10px;
+    padding: 10px 25px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.skill:hover
+{
+    background: var(--primary-color);
+}
+
+.about-me
+{
+    margin-top: 10px;
+}
+
+.fact
+{
+    color: black;
+    margin: 15px 0;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.fun-fact
+{
+    color: black;
+    position: absolute;
+    bottom: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}

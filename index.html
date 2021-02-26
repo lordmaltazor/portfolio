@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malte Svensén - Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section>
+        <h1>Malte Svensén</h1>
+
+        <h2>Front-end / React developer</h2>
+
+        <a href="https://github.com/lordmaltazor" target="_blank">
+            <button class="social-button">
+                <img class="social-icon" src="images/githubLogo.png" alt="Github Logo">
+
+                <p class="social-text">Github</p>
+            </button>
+        </a>
+
+        <a href="https://twitter.com/lordmaltazor" target="_blank">
+            <button class="social-button">
+                <img class="social-icon" src="images/twitterIcon.png" alt="Twitter Logo">
+
+                <p class="social-text">Twitter</p>
+            </button>
+        </a>
+
+        <a href="mailto:malte.svensen@hotmail.com" target="_blank">
+            <button class="social-button">
+                <img class="social-icon small-social-icon" src="images/emailIcon.png" alt="Email Logo">
+
+                <p class="social-text">E-mail</p>
+            </button>
+        </a>
+
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+    </section>
+
+    <section>
+        <h1>Projects</h1>
+
+        <div class="projects">
+            <div class="projects-row">
+                <a href="https://github.com/lordmaltazor/social-media-app" target="_blank">
+                    <button class="project">
+                        <img class="project-icon" src="images/socialMediaWebsiteImage1.PNG"
+                            alt="Social media app screenshot">
+
+                        <p class="project-description">A social media web app made with React and Firebase.
+                            Login/sign-up page, creating posts, comments, likes, friends, custom feed etc</p>
+                    </button>
+                </a>
+
+                <a href="https://lordmaltazor.github.io/react-covid-19-tracker" target="_blank">
+                    <button class="project">
+                        <img class="project-icon" src="images/covid19Icon.png" alt="Covid-19 tracker logo">
+
+                        <p class="project-description">A simple React website that displays the number of covid-19
+                            cases, deaths and recoveries world-wide and in any given country.</p>
+                    </button>
+                </a>
+            </div>
+
+            <div class="projects-row">
+                <a href="https://github.com/lordmaltazor/meme-sharing-app" target="_blank">
+                    <button class="project">
+                        <img class="project-icon" src="images/githubLogo.png" alt="Github logo">
+
+                        <p class="project-description">An instagram-like mobile app made with React Native and Firebase
+                            where you can upload images from the camera feed and like other's pictures.
+                        </p>
+                    </button>
+                </a>
+
+                <a href="https://github.com/lordmaltazor/workout-manager" target="_blank">
+                    <button class="project">
+                        <img class="project-icon" src="images/githubLogo.png" alt="Github logo">
+
+                        <p class="project-description">A mobile app made in React Native for managing and organizing
+                            workouts. You can create your own workout splits, change name, change workout days and even
+                            get push notification reminders</p>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1>Skills</h1>
+
+        <div class="skills">
+            <button class="skill">React</button>
+            <button class="skill">Javascript</button>
+            <button class="skill">HTML & CSS</button>
+            <button class="skill">Git & Github</button>
+            <button class="skill">Unity & c#</button>
+            <button class="skill">Blender</button>
+            <button class="skill">React Native</button>
+            <button class="skill">Figma</button>
+            <button class="skill">VScode</button>
+        </div>
+    </section>
+
+    <section>
+        <h1>About me</h1>
+
+        <div class="about-me">
+            <p class="fact">Name: Malte Svensén</p>
+            <p class="fact" id='age'></p>
+            <p class="fact">From: Sweden</p>
+            <p class="fact" id='coding-experience'></p>
+        </div>
+
+        <p class="fun-fact">yes the age statistics are updated automatically ;)</p>
+    </section>
+
+    <script>
+        const ageText = document.getElementById('age');
+        const codingExperienceText = document.getElementById('coding-experience');
+
+        const getAge = (fromDate) => {
+            var today = new Date();
+            var age = today.getFullYear() - fromDate.getFullYear();
+            var month = today.getMonth() - fromDate.getMonth();
+
+            if (month < 0 || (month === 0 && today.getDate() < fromDate.getDate())) {
+                age--;
+            }
+
+            return age;
+        }
+
+        ageText.innerHTML = `${getAge(new Date('5/24/2005'))} years old`;
+        codingExperienceText.innerHTML = `Been coding for about ${getAge(new Date('12/5/2016'))} years`;
+    </script>
+</body>
+
+</html>
