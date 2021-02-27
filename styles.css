@@ -43,10 +43,11 @@ section
 
 h1, h2
 {
-    margin: 0;
+    margin: 0 20px;
     font-size: 100px;
     font-weight: 900;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 h2
@@ -63,7 +64,8 @@ h2
     align-items: center;
     position: relative;
     margin: 10px 0 0 0;
-    width: 275px;
+    width: 80vw;
+    max-width: 275px;
     height: 50px;
     border: none;
     outline: none;
@@ -106,6 +108,8 @@ a
     background: var(--primary-color);
     position: absolute;
     margin: 0;
+    width: 550px;
+    height: 550px;
     border-radius: 50%; 
     opacity: 0.65;
     z-index: -100;
@@ -116,8 +120,6 @@ a
     top: 35%;  
     left: 25%; 
     transform: translate(-50%, -50%);
-    width: 550px;
-    height: 550px;
     animation: float 5s ease-in-out infinite;
 }
 
@@ -126,8 +128,6 @@ a
     top: 65%;  
     left: 75%; 
     transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
     animation: float 7s ease-in-out infinite;
 }
 
@@ -149,19 +149,41 @@ a
     }
 }
 
+@media screen and (max-width: 1500px)
+{
+    .circle-1, .circle-2
+    {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+    h1
+    {
+        font-size: 50px;
+    }
+
+    h2
+    {
+        font-size: 35px;
+    }
+    
+    .circle-1, .circle-2
+    {
+        width: 250px;
+        height: 250px;
+    }
+}
+
 .projects
 {
     display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-.projects-row
-{
-    display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 .project
@@ -170,8 +192,7 @@ a
     display: flex;
     flex-direction: column;
     width: 600px;
-    height: 775px;
-    margin: 0 50px;
+    margin: 30px 50px;
     padding: 25px;
     padding-bottom: 0;
     border: none;
@@ -191,6 +212,23 @@ a
 .project:hover > .project-icon
 {
     transform: translateY(0px);
+}
+
+@media screen and (min-width: 751px)
+{
+    .project
+    {
+        height: 775px;
+    }
+}
+
+@media screen and (max-width: 750px)
+{
+    .project
+    {
+        width: 90vw;
+        max-width: 400px;
+    }
 }
 
 .project-icon
