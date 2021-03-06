@@ -1,7 +1,7 @@
 :root
 {
     --light-primary-color: rgb(255, 132, 75);
-    --primary-color: rgb(255, 81, 0);
+    --primary-color: rgb(251, 79, 0);
     --dark-primary-color: rgb(199, 63, 0);
 }
 
@@ -191,6 +191,7 @@ a
     background: var(--primary-color);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 600px;
     margin: 30px 50px;
     padding: 25px;
@@ -241,7 +242,7 @@ a
 
 .project-description
 {
-    margin-top: 30px;
+    margin-top: 50px;
     font-size: 25px;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
