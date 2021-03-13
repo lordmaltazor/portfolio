@@ -11,18 +11,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <section>
-        <h1>Malte Svensén</h1>
+    <div class="black-page-transition"></div>
+    <div class="white-page-transition"></div>
+
+    <section class="welcome-section">
+        <h1 class="fade-in">Malte Svensén</h1>
 
         <h2>Front-end / React developer</h2>
 
         <a href="https://github.com/lordmaltazor" target="_blank">
             <button class="social-button">
-                <img class="social-icon" src="images/githubLogo.png" alt="Github Logo">
+                <img class="social-icon no-brightness" src="images/githubLogoWhite.png" alt="Github Logo">
 
                 <p class="social-text">Github</p>
             </button>
@@ -38,33 +46,34 @@
 
         <a href="mailto:malte.svensen@hotmail.com" target="_blank">
             <button class="social-button">
-                <img class="social-icon small-social-icon" src="images/emailIcon.png" alt="Email Logo">
+                <img class="social-icon no-brightness small-social-icon" src="images/emailIcon.png" alt="Email Logo">
 
                 <p class="social-text">E-mail</p>
             </button>
         </a>
-
-        <div class="circle-1"></div>
-        <div class="circle-2"></div>
     </section>
 
-    <section>
-        <h1>Projects</h1>
+    <section class="projects-section">
+        <h1 class="white-text fade-in">Projects</h1>
 
         <div class="projects">
             <a href="https://github.com/lordmaltazor/social-media-app" target="_blank">
-                <button class="project">
-                    <img class="project-icon" src="images/socialMediaWebsiteImage1.PNG"
+                <button class="project fade-in">
+                    <div class="project-icon-container">
+                        <img class="project-icon" src="images/socialMediaWebsiteImage1.PNG" </div>
                         alt="Social media app screenshot">
 
-                    <p class="project-description">A social media website made with React and Firebase and features a
-                        login/sign-up page, creating posts, comments, likes, friends, feed and more!</p>
+                        <p class="project-description">A social media website made with React and Firebase and features
+                            a
+                            login/sign-up page, creating posts, comments, likes, friends, feed and more!</p>
                 </button>
             </a>
 
             <a href="https://lordmaltazor.github.io/youtube-clone" target="_blank">
-                <button class="project">
-                    <img class="project-icon" src="images/youtubeLogo.png" alt="Youtube logo">
+                <button class="project fade-in">
+                    <div class="project-icon-container">
+                        <img class="project-icon" src="images/youtubeLogo.png" alt="Youtube logo">
+                    </div>
 
                     <p class="project-description">A React clone of YouTube which features firebase authentication,
                         uploading videos and thumbnails, a home feed with videos, watching videos, view counts, likes
@@ -73,8 +82,10 @@
             </a>
 
             <a href="https://lordmaltazor.github.io/react-covid-19-tracker" target="_blank">
-                <button class="project">
-                    <img class="project-icon" src="images/covid19Icon.png" alt="Covid-19 tracker logo">
+                <button class="project fade-in">
+                    <div class="project-icon-container">
+                        <img class="project-icon" src="images/covid19Icon.png" alt="Covid-19 tracker logo">
+                    </div>
 
                     <p class="project-description">A simple React website that displays the number of covid-19
                         cases, deaths and recoveries world-wide and in any given country.</p>
@@ -82,8 +93,10 @@
             </a>
 
             <a href="https://github.com/lordmaltazor/meme-sharing-app" target="_blank">
-                <button class="project">
-                    <img class="project-icon" src="images/githubLogo.png" alt="Github logo">
+                <button class="project fade-in">
+                    <div class="project-icon-container">
+                        <img class="project-icon" src="images/githubLogoWhite.png" alt="Github logo">
+                    </div>
 
                     <p class="project-description">An instagram-like mobile app made with React Native and Firebase
                         where you can upload images from your phones image library and like other's pictures.
@@ -93,55 +106,26 @@
         </div>
     </section>
 
-    <section>
-        <h1>Skills</h1>
+    <div class="skills-container">
+        <h1 class="white-text fade-in">Skills</h1>
 
         <div class="skills">
-            <button class="skill">React</button>
-            <button class="skill">Javascript</button>
-            <button class="skill">HTML & CSS</button>
-            <button class="skill">Git & Github</button>
-            <button class="skill">Firebase</button>
-            <button class="skill">Node & npm</button>
-            <button class="skill">React Native</button>
-            <button class="skill">Unity & C#</button>
-            <button class="skill">Figma</button>
-            <button class="skill">VScode</button>
-        </div>
-    </section>
-
-    <section>
-        <h1>About me</h1>
-
-        <div class="about-me">
-            <p class="fact">Name: Malte Svensén</p>
-            <p class="fact" id='age'></p>
-            <p class="fact">From: Sweden</p>
-            <p class="fact" id='coding-experience'></p>
+            <button class="skill fade-in">React</button>
+            <button class="skill fade-in">Javascript</button>
+            <button class="skill fade-in">HTML & CSS</button>
+            <button class="skill fade-in">Git & Github</button>
+            <button class="skill fade-in">Firebase</button>
+            <button class="skill fade-in">Node & npm</button>
+            <button class="skill fade-in">React Native</button>
+            <button class="skill fade-in">Unity & C#</button>
+            <button class="skill fade-in">Figma</button>
+            <button class="skill fade-in">VScode</button>
         </div>
 
-        <p class="fun-fact">yes the age statistics are updated automatically ;)</p>
-    </section>
+        <p class="made-with-text">Made by Malte Svensén in vanilla HTML and CSS ❤️</p>
+    </div>
 
-    <script>
-        const ageText = document.getElementById('age');
-        const codingExperienceText = document.getElementById('coding-experience');
-
-        const getAge = (fromDate) => {
-            var today = new Date();
-            var age = today.getFullYear() - fromDate.getFullYear();
-            var month = today.getMonth() - fromDate.getMonth();
-
-            if (month < 0 || (month === 0 && today.getDate() < fromDate.getDate())) {
-                age--;
-            }
-
-            return age;
-        }
-
-        ageText.innerHTML = `${getAge(new Date('5/24/2005'))} years old`;
-        codingExperienceText.innerHTML = `Been coding for about ${getAge(new Date('12/5/2016'))} years`;
-    </script>
+    <script src='./app.js'></script>
 </body>
 
 </html>
